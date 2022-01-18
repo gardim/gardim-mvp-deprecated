@@ -15,12 +15,7 @@
 </p>
 
 ## Sobre
-O Gardim tem o objetivo de facilitar o cultivo dentro de apartamentos. 
-Para isso, fornece um vaso inteligente com sensores para a captura de indicadores da planta, como umidade do solo,
-luminosidade e temperatura, e é carregado através de luz solar. Envia essas informações para um aplicativo utilizando wi-fi.
-
-### Produto Mínimo Viável
-Nessa versão mínima do produto, temos um aplicativo com um número limite de entradas de plantas. A pessoa irá primeiramente conectar o aplicativo a um vaso, indicar qual a planta a partir de uma base de dados mínima, e receber apenas a informação sobre a quantidade de água da planta, baseando-se na quantidade necessária para manter sua sobrevivência.
+O Gardim é um aplicativo que juntamente a um vaso inteligente, auxilia no cultivo dentro de apartamentos. Essa é uma versão mínima do produto, criada para auxiliar na validação do produto final.
 
 ## Funcionalidades
 + Vaso inteligente;
