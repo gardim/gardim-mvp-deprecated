@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "gardim-app",
+    "slug": "gardim-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "gardim-app"
+}
