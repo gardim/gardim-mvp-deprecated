@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="/resources/icons/gardim.png" alt="Gardim" width="180">
+  <img src="./resources/icons/gardim.png" alt="Gardim" width="180">
   <br>
   Gardim MVP
   <br>
