@@ -20,7 +20,7 @@ O Gardim é um aplicativo que juntamente a um vaso inteligente, auxilia no culti
 ## Funcionalidades
 + Vaso inteligente;
 + Sensor de humidade;
-+ Notificação de status da planta;
++ Informações de status da planta;
 
 ## Mais Informações
 Para mais informações sobre o projeto, por favor leia a página [Wiki](https://github.com/gardim/gardim-mvp/wiki).
