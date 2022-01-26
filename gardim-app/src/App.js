@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navigation from './navigation';
 import { RegistrationContext } from './provider';
-import { getData, storeData, clearAsyncStorage } from './storage';
+import { getData, storeData } from './storage';
 
 function App() {
   const [code, setCode] = useState('');
@@ -11,7 +11,6 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(async () => {
-    await clearAsyncStorage();
     const response = await getData();
     if (response == null) {
       storeData(data);

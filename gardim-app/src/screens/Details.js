@@ -1,22 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import client from '../utils/ClientMQTT';
+import Card from '../component/Card';
+import { validator } from '../utils/Validator';
 
 function DetailsScreen({ route, navigation }) {
   const { name, type, code } = route.params;
-  const { umidity, setUmidity } = useState('');
+  const [humidity, setHumidity] = useState('0');
 
   let receiver = null;
   useEffect(() => {
     console.log('codigo' + code);
-    client(code, setUmidity);
+    client(code, setHumidity);
   }, []);
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text style={styles.name}>{name}</Text>
-      <Text style={styles.type}>{type}</Text>
-      <Text>{umidity}</Text>
+      <Text style={styles.type}>{type.name}</Text>
+      <Card
+        title={'Humidity'}
+        value={humidity}
+        alert={validator(type, parseInt(humidity))}
+      />
     </View>
   );
 }

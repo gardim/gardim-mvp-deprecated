@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import BottomButton from '../component/BottomButton';
+import INFO from '../constants/PlantInfo';
 
 import { RegistrationContext } from '../provider';
 
@@ -14,8 +15,12 @@ function PlantType({ navigation }) {
   };
 
   useEffect(async () => {
-    setType('pimenteira');
+    setType(INFO[0]);
   }, []);
+
+  const pickerItems = INFO.map((e) => (
+    <Picker.Item label={e.name} value={e} key={e.type} />
+  ));
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -25,11 +30,7 @@ function PlantType({ navigation }) {
         style={{ height: 50, width: 150 }}
         onValueChange={(itemValue, itemIndex) => setType(itemValue)}
       >
-        <Picker.Item label="Pimenteira" value="pimenteira" />
-        <Picker.Item label="Roseira" value="roseira" />
-        <Picker.Item label="Petunia" value="petunia" />
-        <Picker.Item label="Suculenta" value="suculenta" />
-        <Picker.Item label="Cacto" value="cacto" />
+        {pickerItems}
       </Picker>
       <BottomButton text={'Continue'} onPressCallback={onPress} />
     </View>

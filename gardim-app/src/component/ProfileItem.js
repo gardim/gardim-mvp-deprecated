@@ -18,7 +18,7 @@ function ProfileItem({ name, type, code, onPressCallback }) {
       </View>
       <View style={{ marginHorizontal: 20, marginVertical: 10 }}>
         <Text style={styles.name}>{name}</Text>
-        <Text style={styles.type}>{type}</Text>
+        <Text style={styles.type}>{type.name}</Text>
       </View>
       <View style={{ marginLeft: 'auto' }}>
         <Feather name="arrow-right" size={28} />

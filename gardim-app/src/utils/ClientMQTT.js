@@ -1,5 +1,5 @@
 import { Client, Message } from 'react-native-paho-mqtt';
-
+import { conversor } from './Validator';
 //Set up an in-memory alternative to global localStorage
 const myStorage = {
   setItem: (key, item) => {
@@ -30,7 +30,7 @@ const ClientMQTT = (topic, post) => {
   });
   client.on('messageReceived', (message) => {
     console.log(message.payloadString);
-    post(message.payloadString);
+    post(conversor(parseInt(message.payloadString)));
   });
 
   // connect the client
