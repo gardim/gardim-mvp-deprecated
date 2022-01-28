@@ -30,7 +30,7 @@ const ClientMQTT = (topic, post) => {
   });
   client.on('messageReceived', (message) => {
     console.log(message.payloadString);
-    post(conversor(parseInt(message.payloadString)));
+    post(parseInt(message.payloadString));
   });
 
   // connect the client

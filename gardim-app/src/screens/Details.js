@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import client from '../utils/ClientMQTT';
 import Card from '../component/Card';
-import { validator } from '../utils/Validator';
+import { evaluation, status } from '../utils/Validator';
 
 function DetailsScreen({ route, navigation }) {
   const { name, type, code } = route.params;
-  const [humidity, setHumidity] = useState('0');
+  const [humidity, setHumidity] = useState('3200');
 
   let receiver = null;
   useEffect(() => {
@@ -20,8 +20,13 @@ function DetailsScreen({ route, navigation }) {
       <Text style={styles.type}>{type.name}</Text>
       <Card
         title={'Humidity'}
-        value={humidity}
-        alert={validator(type, parseInt(humidity))}
+        value={status(humidity).name}
+        alert={evaluation(
+          type.humidity.max.value.min,
+          type.humidity.min.value.max,
+          parseInt(humidity),
+          type.humidity.max.value.max
+        )}
       />
     </View>
   );

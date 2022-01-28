@@ -21,8 +21,8 @@ function Card({ title, value, alert }) {
       </View>
       <View style={{ marginHorizontal: 20, marginVertical: 10 }}>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.value}>{value}%</Text>
-        <Text style={styles.title}>{alert}</Text>
+        <Text style={styles.value}>{value}</Text>
+        <Text style={styles.alert}>{alert}</Text>
       </View>
     </View>
   );
@@ -30,10 +30,14 @@ function Card({ title, value, alert }) {
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 30,
+    fontSize: 20,
   },
   value: {
-    fontSize: 50,
+    fontSize: 30,
+  },
+  alert: {
+    fontSize: 40,
+    fontWeight: 'bold',
   },
 });
 

@@ -1,58 +1,60 @@
+import { DRY, LITTLE_DAMP, SOGGY, VERY_DAMP } from './Status';
+
 var INFO = [
   {
     name: 'Samambaia',
     type: 'samambaia',
     humidity: {
-      min: 40,
-      max: 80,
+      min: LITTLE_DAMP,
+      max: VERY_DAMP,
     },
   },
   {
     name: 'Cróton',
     type: 'croton',
     humidity: {
-      min: 40,
-      max: 80,
+      min: LITTLE_DAMP,
+      max: VERY_DAMP,
     },
   },
   {
     name: 'Orquídea',
     type: 'orquidea',
     humidity: {
-      min: 20,
-      max: 60,
+      min: LITTLE_DAMP,
+      max: LITTLE_DAMP,
     },
   },
   {
     name: 'Espada de São Jorge',
     type: 'espada',
     humidity: {
-      min: 20,
-      max: 60,
+      min: LITTLE_DAMP,
+      max: LITTLE_DAMP,
     },
   },
   {
     name: 'Bromélia',
     type: 'bromelia',
     humidity: {
-      min: 60,
-      max: 80,
+      min: VERY_DAMP,
+      max: SOGGY,
     },
   },
   {
     name: 'Suculenta',
     type: 'suculenta',
     humidity: {
-      min: 20,
-      max: 40,
+      min: DRY,
+      max: LITTLE_DAMP,
     },
   },
   {
     name: 'Cacto',
     type: 'cacto',
     humidity: {
-      min: 20,
-      max: 40,
+      min: DRY,
+      max: LITTLE_DAMP,
     },
   },
 ];
