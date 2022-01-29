@@ -19,7 +19,7 @@ function PlantName({ navigation }) {
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Dê um nome à sua plantinha!</Text>
       <TextInput style={styles.input} onChangeText={(text) => setName(text)} />
-      <BottomButton text={'Finish'} onPressCallback={onPress} />
+      <BottomButton text={'Terminar'} onPressCallback={onPress} />
     </View>
   );
 }

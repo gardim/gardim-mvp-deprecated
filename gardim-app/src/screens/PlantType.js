@@ -32,7 +32,7 @@ function PlantType({ navigation }) {
       >
         {pickerItems}
       </Picker>
-      <BottomButton text={'Continue'} onPressCallback={onPress} />
+      <BottomButton text={'Continuar'} onPressCallback={onPress} />
     </View>
   );
 }

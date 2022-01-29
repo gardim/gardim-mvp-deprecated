@@ -3,6 +3,15 @@ import { Fontisto } from '@expo/vector-icons';
 import { Text, StyleSheet, View } from 'react-native';
 
 function Card({ title, value, alert }) {
+  const status = () => {
+    if (alert === 'alert') {
+      return <Text style={styles.alert}>Alerta!</Text>;
+    } else if (alert === 'caution') {
+      return <Text style={styles.caution}>Cuidado!</Text>;
+    } else {
+      return <Text style={styles.good}>Perfeito!</Text>;
+    }
+  };
   return (
     <View
       style={{
@@ -22,7 +31,7 @@ function Card({ title, value, alert }) {
       <View style={{ marginHorizontal: 20, marginVertical: 10 }}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.value}>{value}</Text>
-        <Text style={styles.alert}>{alert}</Text>
+        {status()}
       </View>
     </View>
   );
@@ -36,8 +45,16 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
   alert: {
-    fontSize: 40,
-    fontWeight: 'bold',
+    color: '#900020',
+    fontSize: 30,
+  },
+  caution: {
+    color: '#f4c430',
+    fontSize: 30,
+  },
+  good: {
+    color: '#6b8e23',
+    fontSize: 30,
   },
 });
 

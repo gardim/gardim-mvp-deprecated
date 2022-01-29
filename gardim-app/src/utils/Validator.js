@@ -1,16 +1,12 @@
 import { DAMP, DRY, LITTLE_DAMP, SOGGY, VERY_DAMP } from '../constants/Status';
 
-export const evaluation = (min, max, value, name) => {
-  console.log(name)
-  console.log('min' + min);
-  console.log('max' + max);
-  console.log('value' + value);
+export const evaluation = (min, max, value) => {
   if (value < min || value > max) {
-    return 'Alert!';
+    return 'alert';
   } else if (value < min + 200 || value > max - 200) {
-    return 'Careful!';
+    return 'caution';
   } else {
-    return 'Good!';
+    return 'good';
   }
 };
 

@@ -6,7 +6,7 @@ import { evaluation, status } from '../utils/Validator';
 
 function DetailsScreen({ route, navigation }) {
   const { name, type, code } = route.params;
-  const [humidity, setHumidity] = useState('3200');
+  const [humidity, setHumidity] = useState('0');
 
   let receiver = null;
   useEffect(() => {
@@ -19,13 +19,12 @@ function DetailsScreen({ route, navigation }) {
       <Text style={styles.name}>{name}</Text>
       <Text style={styles.type}>{type.name}</Text>
       <Card
-        title={'Humidity'}
+        title={'Umidade do Solo'}
         value={status(humidity).name}
         alert={evaluation(
           type.humidity.max.value.min,
           type.humidity.min.value.max,
-          parseInt(humidity),
-          type.humidity.max.value.max
+          parseInt(humidity)
         )}
       />
     </View>

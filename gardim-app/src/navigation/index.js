@@ -17,25 +17,29 @@ export default function Navigation() {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{ title: 'Home' }}
+          options={{ title: 'Tela Principal' }}
         />
 
         <Stack.Screen
           name="InsertCode"
           component={InsertCodeScreen}
-          options={{ title: 'Insert Code' }}
+          options={{ title: 'Insira o Código' }}
         />
         <Stack.Screen
           name="PlantType"
           component={PlantTypeScreen}
-          options={{ title: 'Plant Type' }}
+          options={{ title: 'Tipo da Planta' }}
         />
         <Stack.Screen
           name="PlantName"
           component={PlantNameScreen}
-          options={{ title: 'Plant Name' }}
+          options={{ title: 'Nome da Planta' }}
         />
-        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen
+          name="Details"
+          component={DetailsScreen}
+          options={{ title: 'Detalhes' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
